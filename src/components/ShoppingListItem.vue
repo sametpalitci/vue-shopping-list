@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { useShoppingListStore } from '@/stores/shoppingList'
+import type { ShoppingItem } from '@/stores/shoppingList'
+
+defineProps<{
+  item: ShoppingItem
+}>()
 
 const store = useShoppingListStore()
 </script>
@@ -17,7 +22,7 @@ const store = useShoppingListStore()
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: #f9f9f9;
+  background-color: #333;
   border-radius: 4px;
   gap: 10px;
 }
